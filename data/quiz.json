@@ -1,0 +1,107 @@
+[
+  {
+    "pergunta": "Qual ambiente apresenta a fachada do estádio e a bilheteria?",
+    "alternativas": ["Praça externa", "Campo", "Sala da Taça", "Galeria de Camisas"],
+    "correta": 0,
+    "explicacao": "A praça externa reúne fachada, bilheteria, bandeiras e telões externos.",
+    "ambiente": "praca"
+  },
+  {
+    "pergunta": "Como o usuário acessa a arquibancada a partir da praça?",
+    "alternativas": ["Pelo portão principal", "Atravessando a bilheteria", "Pulando a fachada", "Pelo painel de imagem"],
+    "correta": 0,
+    "explicacao": "A transição para a arquibancada ocorre pelo portão principal sinalizado.",
+    "ambiente": "praca"
+  },
+  {
+    "pergunta": "O que bloqueia o caminho na arquibancada?",
+    "alternativas": ["Fileiras de cadeiras", "Portas abertas", "Áreas amarelas", "O gramado"],
+    "correta": 0,
+    "explicacao": "As fileiras de cadeiras representam arquibancadas sólidas e não podem ser atravessadas.",
+    "ambiente": "arquibancada"
+  },
+  {
+    "pergunta": "Qual objeto interativo fica no centro do campo?",
+    "alternativas": ["Bola", "Vitrine", "Taça", "Mascote"],
+    "correta": 0,
+    "explicacao": "A bola está no círculo central e abre uma dica ao ser clicada.",
+    "ambiente": "campo"
+  },
+  {
+    "pergunta": "Por onde se acessa o túnel dos jogadores a partir do campo?",
+    "alternativas": ["Pela entrada central do túnel", "Pelas laterais do campo", "Pelo banco de reservas", "Atravessando o gol"],
+    "correta": 0,
+    "explicacao": "As laterais são bloqueadas; a passagem válida fica na entrada central do túnel.",
+    "ambiente": "campo"
+  },
+  {
+    "pergunta": "Qual característica visual marca o túnel dos jogadores?",
+    "alternativas": ["Luzes LED e fumaça", "Vitrines transparentes", "Camisas em molduras", "Bandeiras de campeões"],
+    "correta": 0,
+    "explicacao": "O túnel usa luzes LED, fumaça simulada e frases motivacionais.",
+    "ambiente": "tunel"
+  },
+  {
+    "pergunta": "Qual ambiente possui vitrines históricas e painéis de exposição?",
+    "alternativas": ["Museu do Futebol", "Praça externa", "Campo", "Sala das Mascotes"],
+    "correta": 0,
+    "explicacao": "O museu contém vitrines, painéis históricos, galeria e vídeo institucional.",
+    "ambiente": "museu"
+  },
+  {
+    "pergunta": "Qual arquivo deve ser editado para trocar textos dos ambientes?",
+    "alternativas": ["data/conteudos.json", "js/movimento.js", "css/style.css", "index.html"],
+    "correta": 0,
+    "explicacao": "Os textos principais ficam centralizados em data/conteudos.json.",
+    "ambiente": "museu"
+  },
+  {
+    "pergunta": "O que a Linha do Tempo organiza?",
+    "alternativas": ["Períodos históricos das Copas", "Somente controles de áudio", "Apenas botões de movimento", "Arquivos CSS"],
+    "correta": 0,
+    "explicacao": "A linha do tempo apresenta painéis por décadas e períodos futuros.",
+    "ambiente": "linhaTempo"
+  },
+  {
+    "pergunta": "O que aparece na Sala dos Campeões?",
+    "alternativas": ["Bandeiras e número de títulos", "Somente gols", "Vestiários reais", "Configurações do navegador"],
+    "correta": 0,
+    "explicacao": "A Sala dos Campeões exibe países, títulos, ranking e curiosidades.",
+    "ambiente": "campeoes"
+  },
+  {
+    "pergunta": "Qual sala permite alternar entre camisa clássica, moderna e comemorativa?",
+    "alternativas": ["Galeria de Camisas", "Sala da Taça", "Túnel", "Praça externa"],
+    "correta": 0,
+    "explicacao": "A Galeria de Camisas tem botões para trocar o modelo em destaque.",
+    "ambiente": "camisas"
+  },
+  {
+    "pergunta": "Qual sala tem totens animados e quiz temático?",
+    "alternativas": ["Sala das Mascotes", "Campo", "Museu", "Arquibancada"],
+    "correta": 0,
+    "explicacao": "A Sala das Mascotes usa totens animados, áudio e quiz das mascotes.",
+    "ambiente": "mascotes"
+  },
+  {
+    "pergunta": "O que bloqueia o centro da Sala da Taça?",
+    "alternativas": ["Pedestal", "Porta lateral", "Painel do mapa", "Arquivo JSON"],
+    "correta": 0,
+    "explicacao": "O pedestal central é sólido para permitir circular ao redor sem atravessá-lo.",
+    "ambiente": "taca"
+  },
+  {
+    "pergunta": "Qual função verifica se uma nova posição pode ser usada?",
+    "alternativas": ["podeMoverPara", "trocarImagem", "silenciarTudo", "iniciarQuiz"],
+    "correta": 0,
+    "explicacao": "A função podeMoverPara consulta limites, portas e colisores do ambiente atual.",
+    "ambiente": "quizFinal"
+  },
+  {
+    "pergunta": "Onde ficam definidas as portas entre ambientes?",
+    "alternativas": ["js/colisoes.js", "assets/video", "README.md", "css/style.css"],
+    "correta": 0,
+    "explicacao": "As áreas de porta ficam no array portas dentro de js/colisoes.js.",
+    "ambiente": "quizFinal"
+  }
+]

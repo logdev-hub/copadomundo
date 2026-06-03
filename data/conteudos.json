@@ -1,0 +1,54 @@
+{
+  "praca": {
+    "titulo": "Praça externa do estádio",
+    "texto": "A praça externa apresenta a fachada do estádio, bilheteria, bandeiras, telões e placas de orientação. O portão principal leva para a arquibancada, enquanto a porta lateral leva ao Museu do Futebol."
+  },
+  "arquibancada": {
+    "titulo": "Arquibancada",
+    "texto": "A arquibancada tem fileiras de cadeiras, torcedores simplificados, bandeiras, painéis LED e refletores. As cadeiras são objetos sólidos: caminhe pelos corredores e procure a porta para o campo."
+  },
+  "campo": {
+    "titulo": "Campo de futebol",
+    "texto": "O campo reúne gramado, linhas oficiais, gols, bola central, bancos de reserva e placas publicitárias fictícias. As laterais são bloqueadas; a saída para o túnel fica no fundo do campo."
+  },
+  "tunel": {
+    "titulo": "Túnel dos jogadores",
+    "texto": "O túnel simula um corredor fechado com luzes LED, fumaça, frases motivacionais e som abafado de torcida. A passagem só acontece pelas duas extremidades sinalizadas."
+  },
+  "museu": {
+    "titulo": "Museu do Futebol",
+    "texto": "O museu concentra vitrines, painéis históricos, galeria de imagens, vídeo institucional e portas para as salas temáticas. Vitrines, paredes e painéis são bloqueados para preservar a circulação."
+  },
+  "linhaTempo": {
+    "titulo": "Linha do Tempo das Copas",
+    "texto": "Corredor com painéis por década: 1930-1950, 1960-1980, 1990-2010, 2014-2022 e futuro das Copas. Os textos e imagens podem ser substituídos livremente."
+  },
+  "campeoes": {
+    "titulo": "Sala dos Campeões",
+    "texto": "A sala exibe bandeiras, cards de países campeões, número de títulos, pedestal central e painel de ranking editável."
+  },
+  "camisas": {
+    "titulo": "Galeria de Camisas",
+    "texto": "Galeria com camisas em molduras, vitrines transparentes, legendas e botões para alternar entre modelo clássico, moderno e comemorativo."
+  },
+  "mascotes": {
+    "titulo": "Sala das Mascotes",
+    "texto": "Ambiente lúdico com totens animados, mascotes placeholder, cards de curiosidade, áudio e quiz temático."
+  },
+  "taca": {
+    "titulo": "Sala da Taça",
+    "texto": "Sala especial com taça dourada girando, pedestal iluminado, partículas douradas, vídeo comemorativo e acesso ao quiz final."
+  },
+  "quizFinal": {
+    "titulo": "Sala de Quiz Final",
+    "texto": "Sala final com painel grande, perguntas, alternativas, pontuação, feedback imediato e botão para reiniciar o quiz."
+  },
+  "curiosidades": [
+    "A primeira Copa do Mundo foi realizada em 1930, no Uruguai.",
+    "O Brasil aparece como maior campeão no ranking usado pela experiência.",
+    "A circulação em estádios reais depende de corredores, acessos controlados e áreas de segurança.",
+    "Museus usam vitrines e barreiras para proteger objetos históricos sem impedir a observação.",
+    "Mascotes ajudam a construir a identidade visual e afetiva de cada edição do torneio.",
+    "A linha do tempo pode ser ampliada com novas sedes, campeões, recordes e imagens históricas."
+  ]
+}
