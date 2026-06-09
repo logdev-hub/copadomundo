@@ -16,6 +16,7 @@ const nomesAmbientes = {
   camisas: "Galeria de Camisas",
   mascotes: "Sala das Mascotes",
   taca: "Sala da Taça",
+  cinema: "Sala de Cinema",
   quizFinal: "Sala de Quiz Final"
 };
 
@@ -30,6 +31,7 @@ const limitesAmbientes = {
   camisas: { xMin: -8, xMax: 8, zMin: -8, zMax: 8 },
   mascotes: { xMin: -8, xMax: 8, zMin: -8, zMax: 8 },
   taca: { xMin: -9, xMax: 9, zMin: -9, zMax: 9 },
+  cinema: { xMin: -9, xMax: 9, zMin: -10, zMax: 10 },
   quizFinal: { xMin: -8, xMax: 8, zMin: -8, zMax: 8 }
 };
 
@@ -44,6 +46,7 @@ const posicoesSeguras = {
   camisas: { x: 0, y: 1.6, z: 4.8, rotY: 0 },
   mascotes: { x: 0, y: 1.6, z: 4.8, rotY: 0 },
   taca: { x: 0, y: 1.6, z: 5.8, rotY: 0 },
+  cinema: { x: 0, y: 1.6, z: 6.6, rotY: 0 },
   quizFinal: { x: 0, y: 1.6, z: 4.8, rotY: 0 }
 };
 
@@ -133,6 +136,7 @@ const colisoes = [
   { ambiente: "mascotes", tipo: "parede", xMin: -8, xMax: -7.2, zMin: -8, zMax: 8 },
   { ambiente: "mascotes", tipo: "parede", xMin: 7.2, xMax: 8, zMin: -8, zMax: 8 },
   { ambiente: "mascotes", tipo: "totem", xMin: -5.5, xMax: -3.8, zMin: -1.3, zMax: 1.3 },
+  { ambiente: "mascotes", tipo: "totem", xMin: -0.95, xMax: 0.95, zMin: -4.2, zMax: -2.15 },
   { ambiente: "mascotes", tipo: "totem", xMin: 3.8, xMax: 5.5, zMin: -1.3, zMax: 1.3 },
 
   { ambiente: "taca", tipo: "parede", xMin: -9, xMax: -1.9, zMin: 8.2, zMax: 9 },
@@ -141,6 +145,15 @@ const colisoes = [
   { ambiente: "taca", tipo: "parede", xMin: -9, xMax: -8.2, zMin: -9, zMax: 9 },
   { ambiente: "taca", tipo: "parede", xMin: 8.2, xMax: 9, zMin: -9, zMax: 9 },
   { ambiente: "taca", tipo: "pedestal", xMin: -1.5, xMax: 1.5, zMin: -1.5, zMax: 1.5 },
+
+  { ambiente: "cinema", tipo: "parede", xMin: -9, xMax: -1.9, zMin: 9.2, zMax: 10 },
+  { ambiente: "cinema", tipo: "parede", xMin: 1.9, xMax: 9, zMin: 9.2, zMax: 10 },
+  { ambiente: "cinema", tipo: "parede", xMin: -9, xMax: 9, zMin: -10, zMax: -9.2 },
+  { ambiente: "cinema", tipo: "parede", xMin: -9, xMax: -8.2, zMin: -10, zMax: 10 },
+  { ambiente: "cinema", tipo: "parede", xMin: 8.2, xMax: 9, zMin: -10, zMax: 10 },
+  { ambiente: "cinema", tipo: "telao", xMin: -5.9, xMax: 5.9, zMin: -9.5, zMax: -8.75 },
+  { ambiente: "cinema", tipo: "poltronas", xMin: -7.2, xMax: -1.1, zMin: -1.2, zMax: 5.2 },
+  { ambiente: "cinema", tipo: "poltronas", xMin: 1.1, xMax: 7.2, zMin: -1.2, zMax: 5.2 },
 
   { ambiente: "quizFinal", tipo: "parede", xMin: -8, xMax: -1.8, zMin: 7.2, zMax: 8 },
   { ambiente: "quizFinal", tipo: "parede", xMin: 1.8, xMax: 8, zMin: 7.2, zMax: 8 },
@@ -166,6 +179,7 @@ const portas = [
   { origem: "museu", destino: "camisas", xMin: 15.0, xMax: 16.5, zMin: -11.4, zMax: -7.6, novaPosicao: { x: 0, y: 1.6, z: 5.5, rotY: 0 } },
   { origem: "museu", destino: "mascotes", xMin: -16.5, xMax: -15.0, zMin: 7.6, zMax: 11.4, novaPosicao: { x: 0, y: 1.6, z: 5.5, rotY: 0 } },
   { origem: "museu", destino: "taca", xMin: 15.0, xMax: 16.5, zMin: 7.6, zMax: 11.4, novaPosicao: { x: 0, y: 1.6, z: 6.2, rotY: 0 } },
+  { origem: "museu", destino: "cinema", xMin: 15.0, xMax: 16.5, zMin: -1.9, zMax: 1.9, novaPosicao: { x: 0, y: 1.6, z: 7.4, rotY: 0 } },
   { origem: "linhaTempo", destino: "museu", xMin: -1.8, xMax: 1.8, zMin: 15.0, zMax: 16.5, novaPosicao: { x: 0, y: 1.6, z: -11.5, rotY: 180 } },
   { origem: "linhaTempo", destino: "campeoes", xMin: 4.0, xMax: 5.5, zMin: -4.4, zMax: -0.4, novaPosicao: { x: -5.8, y: 1.6, z: 0, rotY: -90 } },
   { origem: "linhaTempo", destino: "quizFinal", xMin: -1.8, xMax: 1.8, zMin: -16.5, zMax: -15.0, novaPosicao: { x: 0, y: 1.6, z: 5.4, rotY: 0 } },
@@ -175,6 +189,7 @@ const portas = [
   { origem: "mascotes", destino: "museu", xMin: -1.7, xMax: 1.7, zMin: 7.0, zMax: 8.5, novaPosicao: { x: -13.2, y: 1.6, z: 9.5, rotY: -90 } },
   { origem: "taca", destino: "museu", xMin: -1.7, xMax: 1.7, zMin: 8.0, zMax: 9.5, novaPosicao: { x: 13.2, y: 1.6, z: 9.5, rotY: 90 } },
   { origem: "taca", destino: "quizFinal", xMin: -1.7, xMax: 1.7, zMin: -9.5, zMax: -8.0, novaPosicao: { x: 0, y: 1.6, z: 5.4, rotY: 0 } },
+  { origem: "cinema", destino: "museu", xMin: -1.7, xMax: 1.7, zMin: 9.0, zMax: 10.5, novaPosicao: { x: 13.2, y: 1.6, z: 0, rotY: 90 } },
   { origem: "quizFinal", destino: "linhaTempo", xMin: -1.7, xMax: 1.7, zMin: 7.0, zMax: 8.5, novaPosicao: { x: 0, y: 1.6, z: -13.4, rotY: 180 } },
   { origem: "quizFinal", destino: "taca", xMin: -8.5, xMax: -7.0, zMin: -1.7, zMax: 1.7, novaPosicao: { x: 3.4, y: 1.6, z: -6.4, rotY: 150 } }
 ];

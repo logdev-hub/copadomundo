@@ -8,6 +8,8 @@
   --cor-destaque: #ffd45a;
   --cor-campo: #2f9d58;
   --sombra-ui: 0 16px 40px rgba(0, 0, 0, 0.35);
+  --fonte-titulo: "Rajdhani", "Segoe UI", system-ui, sans-serif;
+  --fonte-corpo: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -22,7 +24,7 @@ body {
   overflow: hidden;
   background: var(--cor-fundo);
   color: var(--cor-texto);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--fonte-corpo);
 }
 
 button {
@@ -107,6 +109,7 @@ button {
   line-height: 0.96;
   font-weight: 900;
   letter-spacing: 0;
+  font-family: var(--fonte-titulo);
 }
 
 .subtitulo-inicial {
@@ -145,6 +148,7 @@ button {
   margin: 0 0 8px;
   font-size: 1rem;
   font-weight: 800;
+  font-family: var(--fonte-titulo);
 }
 
 .grade-instrucoes p {
@@ -193,6 +197,7 @@ a-scene {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 0.86rem;
   font-weight: 800;
+  font-family: var(--fonte-titulo);
 }
 
 .status-webxr {
@@ -215,6 +220,7 @@ a-scene {
   border-color: rgba(255, 255, 255, 0.22);
   color: var(--cor-texto);
   font-weight: 700;
+  font-family: var(--fonte-corpo);
 }
 
 .painel-lateral .btn:hover,
@@ -355,6 +361,8 @@ a-scene {
   margin: 0 0 14px;
   font-size: 1.15rem;
   line-height: 1.35;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
 }
 
 .quiz-alternativas {
@@ -393,13 +401,18 @@ a-scene {
 
 .modal-escuro {
   color: var(--cor-texto);
-  background: #0a111f;
+  background: linear-gradient(180deg, #0b1322 0%, #070d18 100%);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
 }
 
 .modal-escuro .modal-header {
   border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.modal-title {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
 }
 
 .modal-imagem,
@@ -413,10 +426,76 @@ a-scene {
   background: #050912;
 }
 
+.modal-youtube {
+  width: 100%;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: #050912;
+  aspect-ratio: 16 / 9;
+}
+
+.modal-youtube-player,
+.modal-youtube-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.controles-youtube {
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.controles-youtube button {
+  width: 48px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.controles-youtube button:hover,
+.controles-youtube button:focus-visible {
+  background: rgba(255, 212, 90, 0.22);
+  border-color: rgba(255, 212, 90, 0.7);
+}
+
+.modal-sketchfab {
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: #050912;
+  aspect-ratio: 16 / 9;
+}
+
+.modal-sketchfab iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.creditos-sketchfab {
+  margin: 0 0 12px;
+  color: var(--cor-texto-suave);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 .modal-texto {
   color: var(--cor-texto-suave);
   line-height: 1.6;
   white-space: pre-line;
+  font-size: 0.98rem;
 }
 
 .grade-mapa {
@@ -512,6 +591,16 @@ a-scene {
     left: 12px;
     width: calc(100vw - 24px);
     max-height: 42vh;
+  }
+
+  .controles-youtube {
+    grid-template-columns: repeat(5, 44px);
+    gap: 7px;
+  }
+
+  .controles-youtube button {
+    width: 44px;
+    height: 40px;
   }
 }
 

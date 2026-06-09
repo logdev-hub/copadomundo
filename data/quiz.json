@@ -70,10 +70,10 @@
     "ambiente": "campeoes"
   },
   {
-    "pergunta": "Qual sala permite alternar entre camisa clássica, moderna e comemorativa?",
+    "pergunta": "Qual sala apresenta um vídeo sobre os uniformes da Copa de 2022?",
     "alternativas": ["Galeria de Camisas", "Sala da Taça", "Túnel", "Praça externa"],
     "correta": 0,
-    "explicacao": "A Galeria de Camisas tem botões para trocar o modelo em destaque.",
+    "explicacao": "A Galeria de Camisas foi atualizada como uma instalação em vídeo sobre os mantos da Copa de 2022.",
     "ambiente": "camisas"
   },
   {
@@ -96,6 +96,13 @@
     "correta": 0,
     "explicacao": "A função podeMoverPara consulta limites, portas e colisores do ambiente atual.",
     "ambiente": "quizFinal"
+  },
+  {
+    "pergunta": "Qual ambiente funciona como uma pequena sala de exibição dentro do museu?",
+    "alternativas": ["Sala de Cinema", "Campo", "Praça externa", "Arquibancada"],
+    "correta": 0,
+    "explicacao": "A Sala de Cinema tem tela grande, luz baixa e assentos voltados para o documentário.",
+    "ambiente": "cinema"
   },
   {
     "pergunta": "Onde ficam definidas as portas entre ambientes?",

@@ -21,23 +21,27 @@
   },
   "linhaTempo": {
     "titulo": "Linha do Tempo das Copas",
-    "texto": "Corredor com painéis por década: 1930-1950, 1960-1980, 1990-2010, 2014-2022 e futuro das Copas. Os textos e imagens podem ser substituídos livremente."
+    "texto": "Corredor com painéis por década: 1930-1950, 1960-1980, 1990-2010, 2014-2022 e futuro das Copas, reunindo fotos históricas, sedes e campeões."
   },
   "campeoes": {
     "titulo": "Sala dos Campeões",
-    "texto": "A sala exibe bandeiras, cards de países campeões, número de títulos, pedestal central e painel de ranking editável."
+    "texto": "A sala exibe bandeiras reais, cards de países campeões, número de títulos, anos das conquistas, pedestal central e painel de ranking até 2022."
   },
   "camisas": {
     "titulo": "Galeria de Camisas",
-    "texto": "Galeria com camisas em molduras, vitrines transparentes, legendas e botões para alternar entre modelo clássico, moderno e comemorativo."
+    "texto": "A Galeria de Camisas agora apresenta um vídeo em português sobre os uniformes da Copa de 2022, com amostras cromáticas e leitura curatorial sobre identidade, design e torcida."
   },
   "mascotes": {
     "titulo": "Sala das Mascotes",
-    "texto": "Ambiente lúdico com totens animados, mascotes placeholder, cards de curiosidade, áudio e quiz temático."
+    "texto": "Ambiente lúdico com vídeo em português sobre todos os mascotes das Copas, totens cenográficos e curiosidade sobre a estreia das mascotes em 1966."
   },
   "taca": {
     "titulo": "Sala da Taça",
-    "texto": "Sala especial com taça dourada girando, pedestal iluminado, partículas douradas, vídeo comemorativo e acesso ao quiz final."
+    "texto": "Sala especial com taça dourada girando, pedestal iluminado, partículas douradas, imagens existentes e vídeo de apoio histórico sobre a trajetória da Copa."
+  },
+  "cinema": {
+    "titulo": "Sala de Cinema",
+    "texto": "Pequena sala imersiva com luz baixa, fileiras de assentos, tela principal grande e uma sessão em vídeo para reviver momentos que construíram a história da Copa do Mundo."
   },
   "quizFinal": {
     "titulo": "Sala de Quiz Final",
@@ -48,7 +52,8 @@
     "O Brasil aparece como maior campeão no ranking usado pela experiência.",
     "A circulação em estádios reais depende de corredores, acessos controlados e áreas de segurança.",
     "Museus usam vitrines e barreiras para proteger objetos históricos sem impedir a observação.",
-    "Mascotes ajudam a construir a identidade visual e afetiva de cada edição do torneio.",
-    "A linha do tempo pode ser ampliada com novas sedes, campeões, recordes e imagens históricas."
+    "As mascotes fazem parte da Copa desde 1966, quando World Cup Willie apareceu na edição da Inglaterra.",
+    "A Telstar, bola de 1970, ficou marcada pelo desenho preto e branco pensado para a televisão.",
+    "O troféu atual da Copa passou a ser entregue em 1974."
   ]
 }

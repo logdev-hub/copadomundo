@@ -5,40 +5,204 @@
 
 const videosExperiencia = {
   abertura: {
-    src: "assets/video/abertura-copa.mp4",
-    poster: "assets/posters/poster-abertura.jpg"
+    tipo: "youtube",
+    youtubeId: "J3q73ZQC0O4",
+    src: "https://www.youtube.com/watch?v=J3q73ZQC0O4",
+    titulo: "Curiosidades das Copas do Mundo",
+    canal: "Museu do Futebol",
+    poster: "assets/posters/youtube/curiosidades-museu.jpg"
   },
   momentos: {
-    src: "assets/video/momentos-historicos.mp4",
-    poster: "assets/posters/poster-abertura.jpg"
+    tipo: "youtube",
+    youtubeId: "Ktsp-7PVRqk",
+    src: "https://www.youtube.com/watch?v=Ktsp-7PVRqk",
+    titulo: "Histórias bizarras de Copa",
+    canal: "Zizao Fut",
+    poster: "assets/posters/youtube/historias-bizarras.jpg"
   },
   regras: {
-    src: "assets/video/regras-futebol.mp4",
-    poster: "assets/posters/poster-abertura.jpg"
+    tipo: "youtube",
+    youtubeId: "jtxRUOAu77A",
+    src: "https://www.youtube.com/watch?v=jtxRUOAu77A",
+    titulo: "80 fatos da Copa do Mundo",
+    canal: "SoccerJM",
+    poster: "assets/posters/youtube/80-fatos.jpg"
+  },
+  artilhariaCampo: {
+    tipo: "youtube",
+    youtubeId: "_3j86ej4_1A",
+    src: "https://www.youtube.com/watch?v=_3j86ej4_1A",
+    titulo: "Gols marcantes das Copas",
+    canal: "Almanaque das Copas",
+    poster: "assets/posters/youtube/artilharia-copa.jpg"
+  },
+  estadiosCampo: {
+    tipo: "youtube",
+    youtubeId: "BZT8joc2IE8",
+    src: "https://www.youtube.com/watch?v=BZT8joc2IE8",
+    titulo: "Estádios da Copa",
+    canal: "YouTube",
+    poster: "assets/posters/youtube/estadios-copa.jpg"
   },
   tunel: {
-    src: "assets/video/tunel-jogadores.mp4",
-    poster: "assets/posters/poster-tunel.jpg"
+    tipo: "youtube",
+    youtubeId: "zd3RSakBaVw",
+    src: "https://www.youtube.com/watch?v=zd3RSakBaVw",
+    titulo: "Curiosidades malucas das Copas",
+    canal: "Mega Curioso",
+    poster: "assets/posters/youtube/curiosidades-malucas.jpg"
   },
   museu: {
-    src: "assets/video/museu-futebol.mp4",
-    poster: "assets/posters/poster-abertura.jpg"
+    tipo: "youtube",
+    youtubeId: "rqwUAj8SH_o",
+    src: "https://www.youtube.com/watch?v=rqwUAj8SH_o",
+    titulo: "Todas as Copas do Mundo em 18 minutos",
+    canal: "Victorando Fut",
+    poster: "assets/posters/youtube/historia-18-min.jpg"
   },
   linhaTempo: {
-    src: "assets/video/linha-tempo.mp4",
-    poster: "assets/posters/poster-abertura.jpg"
+    tipo: "youtube",
+    youtubeId: "ma9ATBiC5oM",
+    src: "https://www.youtube.com/watch?v=ma9ATBiC5oM",
+    titulo: "Questionando todas as Copas",
+    canal: "Jozão Futebol",
+    poster: "assets/posters/youtube/questionando-copas.jpg"
+  },
+  bolasCopa: {
+    tipo: "youtube",
+    youtubeId: "TVA77sCZ1CU",
+    src: "https://www.youtube.com/watch?v=TVA77sCZ1CU",
+    titulo: "Bolas da Copa do Mundo",
+    canal: "YouTube",
+    poster: "assets/posters/youtube/bolas-copa.jpg"
   },
   campeoes: {
-    src: "assets/video/campeoes-copa.mp4",
-    poster: "assets/posters/poster-abertura.jpg"
+    tipo: "youtube",
+    youtubeId: "aa4jHoN7Pss",
+    src: "https://www.youtube.com/watch?v=aa4jHoN7Pss",
+    titulo: "Histórias absurdas da Seleção Brasileira",
+    canal: "Brasil",
+    poster: "assets/posters/youtube/selecao-brasileira.jpg"
+  },
+  rankingCampeoes: {
+    tipo: "youtube",
+    youtubeId: "k2BNW8G0j-U",
+    src: "https://www.youtube.com/watch?v=k2BNW8G0j-U",
+    titulo: "Maiores campeões da Copa",
+    canal: "Gravity",
+    poster: "assets/posters/youtube/ranking-campeoes-video.jpg"
   },
   mascotes: {
-    src: "assets/video/mascotes-copa.mp4",
-    poster: "assets/posters/poster-abertura.jpg"
+    tipo: "youtube",
+    youtubeId: "nx4ecM7RmWc",
+    src: "https://www.youtube.com/watch?v=nx4ecM7RmWc",
+    titulo: "10 curiosidades da Copa do Mundo",
+    canal: "Um Clubista",
+    poster: "assets/posters/youtube/10-curiosidades.jpg"
+  },
+  camisas2022: {
+    tipo: "youtube",
+    youtubeId: "DhBH8uz9X5M",
+    src: "https://www.youtube.com/watch?v=DhBH8uz9X5M",
+    titulo: "Todas as camisas para a Copa do Mundo 2022",
+    canal: "YouTube",
+    poster: "assets/posters/youtube/camisas-2022.jpg"
+  },
+  mascotesCopas: {
+    tipo: "youtube",
+    youtubeId: "r9OkZBizbIE",
+    src: "https://www.youtube.com/watch?v=r9OkZBizbIE",
+    titulo: "Todos os mascotes das Copas do Mundo",
+    canal: "YouTube",
+    poster: "assets/posters/youtube/mascotes-copas.jpg"
   },
   taca: {
-    src: "assets/video/taca-copa.mp4",
-    poster: "assets/posters/poster-taca.jpg"
+    tipo: "youtube",
+    youtubeId: "rqwUAj8SH_o",
+    src: "https://www.youtube.com/watch?v=rqwUAj8SH_o",
+    titulo: "A história de todas as Copas do Mundo em 18 minutos",
+    canal: "Victorando Fut",
+    poster: "assets/posters/youtube/historia-18-min.jpg"
+  },
+  cinema: {
+    tipo: "youtube",
+    youtubeId: "rqwUAj8SH_o",
+    src: "https://www.youtube.com/watch?v=rqwUAj8SH_o",
+    titulo: "A história de todas as Copas do Mundo em 18 minutos",
+    canal: "Victorando Fut",
+    poster: "assets/posters/youtube/historia-18-min.jpg"
+  },
+  copa1930: {
+    tipo: "youtube",
+    youtubeId: "Tg-rBNdXVpw",
+    src: "https://www.youtube.com/watch?v=Tg-rBNdXVpw",
+    titulo: "Copa do Mundo de 1930",
+    canal: "Dicas Educação Física",
+    poster: "assets/posters/youtube/copa-1930.jpg"
+  },
+  copa1950: {
+    tipo: "youtube",
+    youtubeId: "wdA0PwLi8sk",
+    src: "https://www.youtube.com/watch?v=wdA0PwLi8sk",
+    titulo: "Copa do Mundo de 1950",
+    canal: "Dicas Educação Física",
+    poster: "assets/posters/youtube/copa-1950.jpg"
+  },
+  copa2018: {
+    tipo: "youtube",
+    youtubeId: "Vlc1liKqQwI",
+    src: "https://www.youtube.com/watch?v=Vlc1liKqQwI",
+    titulo: "A história completa da Copa de 2018",
+    canal: "SoccerJM",
+    poster: "assets/posters/youtube/copa-2018.jpg"
+  },
+  origem2018: {
+    tipo: "youtube",
+    youtubeId: "VplArlh1Htg",
+    src: "https://www.youtube.com/watch?v=VplArlh1Htg",
+    titulo: "Da origem até 2018",
+    canal: "Eurofut",
+    poster: "assets/posters/youtube/origem-ate-2018.jpg"
+  },
+  historiaEducativo: {
+    tipo: "youtube",
+    youtubeId: "fTRB6bNd-4E",
+    src: "https://www.youtube.com/watch?v=fTRB6bNd-4E",
+    titulo: "A história da Copa do Mundo",
+    canal: "Vídeo educativo",
+    poster: "assets/posters/youtube/historia-educativo.jpg"
+  },
+  historiaAtualizada: {
+    tipo: "youtube",
+    youtubeId: "fqVFXkjzC-g",
+    src: "https://www.youtube.com/watch?v=fqVFXkjzC-g",
+    titulo: "A história da Copa atualizada",
+    canal: "Eurofut",
+    poster: "assets/posters/youtube/historia-atualizada.jpg"
+  }
+};
+
+const modelosSketchfab = {
+  jogadorBrasil: {
+    titulo: "Jogador do Brasil",
+    descricao: "Modelo interativo do Sketchfab aberto a partir do jogador posicionado no gramado, próximo à bola central.",
+    embed: "https://sketchfab.com/models/9f5c53887f154af682f8bd9e33ed1be1/embed?autostart=1",
+    pagina: "https://sketchfab.com/3d-models/a-p-rigged-endrick-felipe-brazil-worldcup-2026-9f5c53887f154af682f8bd9e33ed1be1",
+    credito: "Modelo 3D: A-P Rigged Endrick Felipe Brazil Worldcup 2026, por 3D Footballer no Sketchfab."
+  },
+  tacaFifa: {
+    titulo: "FIFA Trophy",
+    descricao: "Modelo interativo do Sketchfab aberto a partir da taça central da sala de troféus.",
+    embed: "https://sketchfab.com/models/8a7abb3c91644e5da66546e7ec552f22/embed?autostart=1",
+    pagina: "https://sketchfab.com/3d-models/fifa-trophy-8a7abb3c91644e5da66546e7ec552f22",
+    credito: "Modelo 3D: FIFA Trophy, por prabinpandey631 no Sketchfab."
+  },
+  bolaTrionda: {
+    titulo: "2026 FIFA World Cup Ball Trionda",
+    descricao: "Modelo interativo do Sketchfab aberto a partir da bola posicionada no circulo central do campo.",
+    embed: "https://sketchfab.com/models/ecb011fedb1b4bef8247283ad57bbf3b/embed?autostart=1&preload=1&transparent=1",
+    pagina: "https://sketchfab.com/3d-models/2026-fifa-world-cup-ball-trionda-ecb011fedb1b4bef8247283ad57bbf3b",
+    credito: "Modelo 3D: 2026 FIFA WORLD CUP BALL TRIONDA, por gusgovea10 no Sketchfab."
   }
 };
 
@@ -69,19 +233,23 @@ const conteudosPadrao = {
   },
   campeoes: {
     titulo: "Sala dos Campeões",
-    texto: "Bandeiras e cards de países campeões apresentam número de títulos e curiosidades editáveis."
+    texto: "Bandeiras e cards de países campeões apresentam número de títulos, anos das conquistas e curiosidades históricas."
   },
   camisas: {
     titulo: "Galeria de Camisas",
-    texto: "Camisas em molduras e vitrines transparentes. Clique nas peças para ampliar e use os botões para alternar modelos."
+    texto: "A galeria agora funciona como uma instalação em vídeo sobre os uniformes da Copa de 2022, com amostras de cor e uma leitura curatorial sobre identidade visual."
   },
   mascotes: {
     titulo: "Sala das Mascotes",
-    texto: "Sala lúdica com totens animados, cards e quiz das mascotes. As bases dos totens bloqueiam a passagem."
+    texto: "Sala lúdica com vídeo em português sobre os mascotes das Copas, totens cenográficos e uma placa sobre a estreia das mascotes em 1966."
   },
   taca: {
     titulo: "Sala da Taça",
-    texto: "A taça gira sobre pedestal iluminado. O pedestal é bloqueado, mas é possível circular ao redor."
+    texto: "A taça gira sobre pedestal iluminado, cercada por imagens existentes e um vídeo de apoio histórico que conecta símbolo, conquista e legado."
+  },
+  cinema: {
+    titulo: "Sala de Cinema",
+    texto: "Pequena sala imersiva com luz baixa, fileiras de assentos, tela principal grande e sessão em vídeo sobre a história das Copas do Mundo."
   },
   quizFinal: {
     titulo: "Sala de Quiz Final",
@@ -152,10 +320,10 @@ const quizPadrao = [
     ambiente: "praca"
   },
   {
-    pergunta: "Qual sala contém camisas em molduras?",
+    pergunta: "Qual sala apresenta um vídeo sobre os uniformes da Copa de 2022?",
     alternativas: ["Galeria de Camisas", "Sala da Taça", "Linha do Tempo", "Praça externa"],
     correta: 0,
-    explicacao: "A Galeria de Camisas apresenta peças em molduras e vitrines.",
+    explicacao: "A Galeria de Camisas foi atualizada como uma instalação em vídeo sobre os mantos da Copa de 2022.",
     ambiente: "camisas"
   },
   {
@@ -164,6 +332,13 @@ const quizPadrao = [
     correta: 0,
     explicacao: "A Sala das Mascotes usa totens com animação leve.",
     ambiente: "mascotes"
+  },
+  {
+    pergunta: "Qual ambiente funciona como uma pequena sala de exibição dentro do museu?",
+    alternativas: ["Sala de Cinema", "Campo", "Praça externa", "Arquibancada"],
+    correta: 0,
+    explicacao: "A Sala de Cinema tem tela grande, luz baixa e assentos voltados para o documentário.",
+    ambiente: "cinema"
   },
   {
     pergunta: "Como editar textos da experiência?",
@@ -195,6 +370,34 @@ let modalGenerico;
 let modalMapa;
 let contextoAudio;
 let osciladoresAtivos = [];
+let youtubeApiPromise;
+let youtubePlayer;
+let audioAtenuadoPorModal = false;
+let quadroAudioAmbiente = null;
+
+const audioAmbienteConfig = {
+  arquibancada: { audio: "audioTorcida", tipo: "torcida", volume: "arquibancada" },
+  campo: { audio: "audioTorcida", tipo: "torcida", volume: 0.96 },
+  tunel: { audio: "audioTorcida", tipo: "torcida", volume: "tunel" },
+  museu: { audio: "audioMuseu", tipo: "museu", volume: 0.22 },
+  linhaTempo: { audio: "audioMuseu", tipo: "museu", volume: 0.2 },
+  campeoes: { audio: "audioMuseu", tipo: "museu", volume: 0.18 },
+  camisas: { audio: "audioMuseu", tipo: "museu", volume: 0.16 },
+  mascotes: { audio: "audioMuseu", tipo: "museu", volume: 0.16 },
+  taca: { audio: "audioTaca", tipo: "taca", volume: 0.36 },
+  cinema: { audio: "audioMuseu", tipo: "museu", volume: 0.12 },
+  quizFinal: { audio: "audioMuseu", tipo: "museu", volume: 0.12 }
+};
+
+const idsAudioAmbiente = ["audioTorcida", "audioMuseu", "audioTaca"];
+
+function limitarVolume(valor) {
+  return Math.max(0, Math.min(1, valor));
+}
+
+function interpolarVolume(inicio, fim, progresso) {
+  return inicio + (fim - inicio) * limitarVolume(progresso);
+}
 
 async function carregarJSON(caminho, fallback) {
   try {
@@ -225,14 +428,35 @@ function obterModal(id) {
   };
 }
 
+function textoNaturalMidia(tipo, titulo, complemento = "") {
+  const mensagens = {
+    video: "Vale a pena assistir com calma: tem muita história nesse quadro.",
+    imagem: "Chegue mais perto e explore este momento da história da Copa.",
+    modelo: "Este conteúdo ajuda a enxergar o futebol para além do placar.",
+    texto: "Aqui, a memória do jogo ganha imagem, voz e emoção."
+  };
+  const base = mensagens[tipo] || mensagens.texto;
+  return complemento ? `${base}\n\n${complemento}` : `${base}${titulo ? `\n\n${titulo}` : ""}`;
+}
+
 function abrirModalConteudo(titulo, texto, imagem, videoSrc, poster) {
   const tituloModal = document.getElementById("modalTitulo");
   const textoModal = document.getElementById("modalTexto");
   const imagemModal = document.getElementById("modalImagem");
   const videoModal = document.getElementById("modalVideo");
+  const youtubeModal = document.getElementById("modalYoutube");
+  const controlesYoutube = document.getElementById("controlesYoutube");
+  const sketchfabModal = document.getElementById("modalSketchfab");
+  const creditosSketchfab = document.getElementById("creditosSketchfab");
 
   tituloModal.textContent = titulo;
-  textoModal.textContent = texto || "";
+  textoModal.textContent = texto || textoNaturalMidia(videoSrc ? "video" : imagem ? "imagem" : "texto", titulo);
+  audioAtenuadoPorModal = Boolean(videoSrc);
+  atualizarAudioAmbiente?.(true);
+  youtubeModal.hidden = true;
+  controlesYoutube.hidden = true;
+  sketchfabModal.hidden = true;
+  creditosSketchfab.hidden = true;
 
   imagemModal.hidden = !imagem;
   if (imagem) {
@@ -258,6 +482,184 @@ function abrirModalConteudo(titulo, texto, imagem, videoSrc, poster) {
   return videoModal;
 }
 
+function carregarYoutubeApi() {
+  if (window.YT?.Player) {
+    return Promise.resolve(window.YT);
+  }
+
+  if (!youtubeApiPromise) {
+    youtubeApiPromise = new Promise((resolve) => {
+      const callbackAnterior = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        callbackAnterior?.();
+        resolve(window.YT);
+      };
+
+      if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
+        const script = document.createElement("script");
+        script.src = "https://www.youtube.com/iframe_api";
+        document.head.appendChild(script);
+      }
+    });
+  }
+
+  return youtubeApiPromise;
+}
+
+function destruirYoutubePlayer() {
+  if (youtubePlayer?.destroy) {
+    youtubePlayer.destroy();
+  }
+  youtubePlayer = null;
+
+  const youtubeModal = document.getElementById("modalYoutube");
+  let playerEl = document.getElementById("modalYoutubePlayer");
+  if (!playerEl && youtubeModal) {
+    playerEl = document.createElement("div");
+    playerEl.id = "modalYoutubePlayer";
+    playerEl.className = "modal-youtube-player";
+    youtubeModal.replaceChildren(playerEl);
+  } else if (playerEl) {
+    playerEl.innerHTML = "";
+  }
+}
+
+function abrirModalYoutube(video, titulo, descricao) {
+  const tituloModal = document.getElementById("modalTitulo");
+  const textoModal = document.getElementById("modalTexto");
+  const imagemModal = document.getElementById("modalImagem");
+  const videoModal = document.getElementById("modalVideo");
+  const youtubeModal = document.getElementById("modalYoutube");
+  const controlesYoutube = document.getElementById("controlesYoutube");
+
+  destruirYoutubePlayer();
+  const playerEl = document.getElementById("modalYoutubePlayer");
+  tituloModal.textContent = titulo || video.titulo || "Vídeo";
+  textoModal.textContent = descricao || textoNaturalMidia("video", video.titulo, `${video.titulo || "Vídeo"} — ${video.canal || "YouTube"}`);
+  audioAtenuadoPorModal = true;
+  atualizarAudioAmbiente?.(true);
+
+  imagemModal.hidden = true;
+  imagemModal.removeAttribute("src");
+  videoModal.pause();
+  videoModal.hidden = true;
+  videoModal.removeAttribute("src");
+  videoModal.removeAttribute("poster");
+  youtubeModal.hidden = false;
+  controlesYoutube.hidden = false;
+  playerEl.innerHTML = "";
+
+  modalGenerico?.show();
+
+  carregarYoutubeApi().then((YT) => {
+    if (youtubeModal.hidden) {
+      return;
+    }
+
+    youtubePlayer = new YT.Player("modalYoutubePlayer", {
+      videoId: video.youtubeId,
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        disablekb: 0,
+        enablejsapi: 1,
+        modestbranding: 1,
+        playsinline: 1,
+        rel: 0,
+        origin: window.location.origin
+      },
+      events: {
+        onReady: (evento) => evento.target.playVideo(),
+        onError: () => {
+          textoModal.textContent = `${textoModal.textContent}\n\nNão foi possível reproduzir o embed neste navegador. Link original: ${video.src}`;
+        }
+      }
+    });
+  });
+}
+
+function controlarYoutube(acao) {
+  if (!youtubePlayer) {
+    return;
+  }
+
+  if (acao === "play") {
+    youtubePlayer.playVideo?.();
+  } else if (acao === "pause") {
+    youtubePlayer.pauseVideo?.();
+  } else if (acao === "stop") {
+    youtubePlayer.stopVideo?.();
+  } else if (acao === "voltar") {
+    const atual = youtubePlayer.getCurrentTime?.() || 0;
+    youtubePlayer.seekTo?.(Math.max(0, atual - 10), true);
+  } else if (acao === "avancar") {
+    const atual = youtubePlayer.getCurrentTime?.() || 0;
+    youtubePlayer.seekTo?.(atual + 10, true);
+  }
+}
+
+function limparSketchfab() {
+  const sketchfabModal = document.getElementById("modalSketchfab");
+  const sketchfabFrame = document.getElementById("modalSketchfabFrame");
+  const creditosSketchfab = document.getElementById("creditosSketchfab");
+
+  if (sketchfabFrame) {
+    sketchfabFrame.removeAttribute("src");
+  }
+  if (sketchfabModal) {
+    sketchfabModal.hidden = true;
+  }
+  if (creditosSketchfab) {
+    creditosSketchfab.hidden = true;
+  }
+}
+
+function abrirSketchfabModelo(chaveModelo) {
+  pausarVideos();
+  const modelo = modelosSketchfab[chaveModelo] || modelosSketchfab.jogadorBrasil;
+
+  const tituloModal = document.getElementById("modalTitulo");
+  const textoModal = document.getElementById("modalTexto");
+  const imagemModal = document.getElementById("modalImagem");
+  const videoModal = document.getElementById("modalVideo");
+  const youtubeModal = document.getElementById("modalYoutube");
+  const controlesYoutube = document.getElementById("controlesYoutube");
+  const sketchfabModal = document.getElementById("modalSketchfab");
+  const sketchfabFrame = document.getElementById("modalSketchfabFrame");
+  const creditosSketchfab = document.getElementById("creditosSketchfab");
+
+  tituloModal.textContent = modelo.titulo;
+  textoModal.textContent = `${modelo.descricao}\n\nOrigem: ${modelo.pagina}`;
+
+  imagemModal.hidden = true;
+  imagemModal.removeAttribute("src");
+  videoModal.pause();
+  videoModal.hidden = true;
+  videoModal.removeAttribute("src");
+  videoModal.removeAttribute("poster");
+  youtubeModal.hidden = true;
+  controlesYoutube.hidden = true;
+  sketchfabFrame.title = modelo.titulo;
+  sketchfabFrame.src = modelo.embed;
+  creditosSketchfab.textContent = modelo.credito;
+  sketchfabModal.hidden = false;
+  creditosSketchfab.hidden = false;
+
+  modalGenerico?.show();
+}
+
+function abrirSketchfabJogador() {
+  abrirSketchfabModelo("jogadorBrasil");
+}
+
+function abrirSketchfabTaca() {
+  abrirSketchfabModelo("tacaFifa");
+}
+
+function abrirSketchfabBola() {
+  abrirSketchfabModelo("bolaTrionda");
+}
+
 function abrirModalTexto(titulo, texto) {
   pausarVideos();
   abrirModalConteudo(titulo, texto);
@@ -273,6 +675,19 @@ function pausarVideos() {
   if (videoModal) {
     videoModal.pause();
   }
+  audioAtenuadoPorModal = false;
+  atualizarAudioAmbiente?.(true);
+  destruirYoutubePlayer();
+  limparSketchfab();
+
+  const youtubeModal = document.getElementById("modalYoutube");
+  const controlesYoutube = document.getElementById("controlesYoutube");
+  if (youtubeModal) {
+    youtubeModal.hidden = true;
+  }
+  if (controlesYoutube) {
+    controlesYoutube.hidden = true;
+  }
 
   document.querySelectorAll("video").forEach((video) => {
     if (video !== videoModal) {
@@ -284,14 +699,20 @@ function pausarVideos() {
 function tocarVideo(idVideo, titulo = "Vídeo", descricao = "") {
   pausarVideos();
   const video = videosExperiencia[idVideo] || { src: idVideo, poster: "" };
+
+  if (video.tipo === "youtube" || video.youtubeId) {
+    abrirModalYoutube(video, titulo || video.titulo, descricao || `${video.titulo} — ${video.canal}`);
+    return;
+  }
+
   const videoModal = abrirModalConteudo(titulo, descricao || "Clique em reproduzir para iniciar o video.", null, video.src, video.poster);
 
-  const mensagemBloqueio = "Se o navegador bloquear a reprodução automática ou se o arquivo ainda não existir, substitua o vídeo indicado na pasta assets/video.";
+  const mensagemBloqueio = "Se o navegador bloquear a reprodução automática ou se o arquivo de vídeo ainda não existir, o pôster temático permanece em exibição.";
 
   const tratarErro = () => {
     const textoModal = document.getElementById("modalTexto");
     const imagemModal = document.getElementById("modalImagem");
-    if (textoModal && !textoModal.textContent.includes("assets/video")) {
+    if (textoModal && !textoModal.textContent.includes("pôster temático")) {
       textoModal.textContent = `${textoModal.textContent}\n\n${mensagemBloqueio}`;
     }
     if (imagemModal && video.poster) {
@@ -322,7 +743,7 @@ function trocarVideo(tela, video) {
 
   elemento.dataset.videoAtual = dadosVideo.src;
   if (dadosVideo.poster) {
-    elemento.setAttribute("material", { shader: "flat", src: dadosVideo.poster, color: "#ffffff" });
+    elemento.setAttribute("material", window.materialTextura?.(dadosVideo.poster) || `shader: flat; src: url(${dadosVideo.poster}); color: #ffffff; side: double`);
   }
 }
 
@@ -334,7 +755,7 @@ function trocarImagem(painel, imagem) {
   }
 
   if (elemento.tagName?.toLowerCase().startsWith("a-")) {
-    elemento.setAttribute("material", { shader: "flat", src: imagem, color: "#ffffff" });
+    elemento.setAttribute("material", window.materialTextura?.(imagem) || `shader: flat; src: url(${imagem}); color: #ffffff; side: double`);
   } else {
     elemento.src = imagem;
   }
@@ -396,31 +817,144 @@ function tocarSintese(tipo) {
   });
 }
 
-function tocarElementoAudio(idAudio, tipo) {
+function tocarElementoAudio(idAudio, tipo, opcoes = {}) {
   const elemento = document.getElementById(idAudio);
   if (!elemento || !window.estadoExperiencia.audioAtivo) {
     return;
   }
 
   elemento.onerror = () => tocarSintese(tipo);
-  elemento.currentTime = 0;
+  elemento.loop = Boolean(opcoes.loop);
+  elemento.volume = opcoes.volume ?? elemento.volume ?? 1;
+  if (opcoes.reiniciar) {
+    elemento.currentTime = 0;
+  }
   const tentativa = elemento.play();
   if (tentativa?.catch) {
     tentativa.catch(() => tocarSintese(tipo));
   }
 }
 
+function volumeTunelPorProximidade() {
+  const posicao = window.obterPosicaoCamera?.() || { z: -10 };
+  const progresso = (posicao.z + 10.5) / 20.5;
+  return interpolarVolume(0.18, 0.74, progresso);
+}
+
+function volumeArquibancadaPorProximidade() {
+  const posicao = window.obterPosicaoCamera?.() || { z: 11 };
+  const progresso = (11 - posicao.z) / 23;
+  return interpolarVolume(0.26, 0.74, progresso);
+}
+
+function obterVolumeBaseAudio(config) {
+  if (config.volume === "tunel") {
+    return volumeTunelPorProximidade();
+  }
+
+  if (config.volume === "arquibancada") {
+    return volumeArquibancadaPorProximidade();
+  }
+
+  return config.volume;
+}
+
+function obterAlvosAudioAmbiente() {
+  const alvos = Object.fromEntries(idsAudioAmbiente.map((id) => [id, 0]));
+
+  if (!window.estadoExperiencia.audioAtivo) {
+    return alvos;
+  }
+
+  const ambiente = window.estadoExperiencia.ambienteAtual || "praca";
+  const config = audioAmbienteConfig[ambiente];
+  if (!config) {
+    return alvos;
+  }
+
+  const volumeBase = obterVolumeBaseAudio(config);
+  alvos[config.audio] = audioAtenuadoPorModal ? volumeBase * 0.22 : volumeBase;
+  return alvos;
+}
+
+function garantirLoopAudio(elemento, tipo) {
+  if (!elemento || elemento._tentandoPlay) {
+    return;
+  }
+
+  elemento.loop = true;
+  elemento._tentandoPlay = true;
+  const tentativa = elemento.play();
+  if (tentativa?.catch) {
+    tentativa.catch(() => {
+      if (!elemento._fallbackSintetico) {
+        tocarSintese(tipo);
+        elemento._fallbackSintetico = true;
+      }
+    }).finally(() => {
+      elemento._tentandoPlay = false;
+    });
+  } else {
+    elemento._tentandoPlay = false;
+  }
+}
+
+function atualizarAudioAmbiente(imediato = false) {
+  const alvos = obterAlvosAudioAmbiente();
+
+  idsAudioAmbiente.forEach((idAudio) => {
+    const elemento = document.getElementById(idAudio);
+    if (!elemento) {
+      return;
+    }
+
+    const ambiente = Object.values(audioAmbienteConfig).find((config) => config.audio === idAudio);
+    const alvo = alvos[idAudio] || 0;
+    const atual = Number.isFinite(elemento.volume) ? elemento.volume : 0;
+    const proximo = imediato ? alvo : atual + (alvo - atual) * 0.08;
+    elemento.volume = Math.max(0, Math.min(1, proximo));
+
+    if (alvo > 0.01 && window.estadoExperiencia.audioAtivo) {
+      garantirLoopAudio(elemento, ambiente?.tipo || "torcida");
+    } else if (elemento.volume < 0.01) {
+      elemento.pause();
+    }
+  });
+
+  const botaoSom = document.getElementById("btnSom");
+  if (botaoSom) {
+    botaoSom.textContent = window.estadoExperiencia.audioAtivo ? "Silenciar" : "Som";
+  }
+}
+
+function loopAudioAmbiente() {
+  atualizarAudioAmbiente(false);
+  quadroAudioAmbiente = window.requestAnimationFrame(loopAudioAmbiente);
+}
+
+function iniciarLoopAudioAmbiente() {
+  if (!quadroAudioAmbiente) {
+    quadroAudioAmbiente = window.requestAnimationFrame(loopAudioAmbiente);
+  }
+}
+
+function pararLoopAudioAmbiente() {
+  if (quadroAudioAmbiente) {
+    window.cancelAnimationFrame(quadroAudioAmbiente);
+    quadroAudioAmbiente = null;
+  }
+}
+
 function silenciarTudo() {
+  pararLoopAudioAmbiente();
   document.querySelectorAll("audio").forEach((audio) => {
     audio.pause();
     audio.currentTime = 0;
+    audio.volume = 0;
   });
   pararAudioSintetico();
   window.estadoExperiencia.audioAtivo = false;
-  const botaoSom = document.getElementById("btnSom");
-  if (botaoSom) {
-    botaoSom.textContent = "Som";
-  }
+  atualizarAudioAmbiente(true);
 }
 
 function alternarAudioAmbiente(tipo = "torcida") {
@@ -429,25 +963,9 @@ function alternarAudioAmbiente(tipo = "torcida") {
     return;
   }
 
-  window.estadoExperiencia.audioAtivo = false;
-  const mapaAudio = {
-    torcida: "audioTorcida",
-    museu: "audioMuseu",
-    taca: "audioTaca"
-  };
-
-  document.querySelectorAll("audio").forEach((audio) => {
-    if (audio.id !== mapaAudio[tipo]) {
-      audio.pause();
-    }
-  });
-
-  tocarElementoAudio(mapaAudio[tipo] || "audioTorcida", tipo);
-
-  const botaoSom = document.getElementById("btnSom");
-  if (botaoSom) {
-    botaoSom.textContent = "Silenciar";
-  }
+  window.estadoExperiencia.audioAtivo = true;
+  iniciarLoopAudioAmbiente();
+  atualizarAudioAmbiente(true);
 }
 
 function tocarClique() {
@@ -455,13 +973,13 @@ function tocarClique() {
     return;
   }
 
-  tocarElementoAudio("audioClique", "clique");
+  tocarElementoAudio("audioClique", "clique", { reiniciar: true, volume: 0.45 });
 }
 
 function obterConteudoAmbiente(ambiente) {
   return conteudos[ambiente] || conteudosPadrao[ambiente] || {
     titulo: window.nomesAmbientes?.[ambiente] || "Ambiente",
-    texto: "Conteudo editavel em data/conteudos.json."
+    texto: "Conteúdo disponível em data/conteudos.json."
   };
 }
 
@@ -500,6 +1018,7 @@ function trocarAmbiente(ambiente, posicaoEntrada) {
   window.aplicarPosicaoCamera?.(posicao, posicao.rotY ?? destino.rotY ?? 0);
   atualizarPainelLateral();
   atualizarPainelQuizPorAmbiente();
+  atualizarAudioAmbiente(true);
 }
 
 function montarMapa() {
@@ -548,7 +1067,7 @@ function renderizarQuiz() {
   feedbackEl.textContent = "";
   estadoQuiz.respondida = false;
   btnProxima.disabled = true;
-  btnProxima.textContent = "Proxima";
+  btnProxima.textContent = "Próxima";
 
   if (estadoQuiz.indice >= estadoQuiz.perguntas.length) {
     perguntaEl.textContent = `Resultado: ${estadoQuiz.pontuacao} de ${estadoQuiz.perguntas.length}`;
@@ -656,6 +1175,7 @@ function iniciarExperiencia() {
 
   window.estadoExperiencia.experienciaIniciada = true;
   window.estadoExperiencia.audioAtivo = true;
+  iniciarLoopAudioAmbiente();
   trocarAmbiente("praca");
 }
 
@@ -703,6 +1223,11 @@ function inicializarEventos() {
   document.getElementById("btnVoltarInicio")?.addEventListener("click", voltarTelaInicial);
   document.getElementById("btnProximaPergunta")?.addEventListener("click", avancarQuiz);
   document.getElementById("btnReiniciarQuiz")?.addEventListener("click", reiniciarQuiz);
+  document.getElementById("btnYoutubePlay")?.addEventListener("click", () => controlarYoutube("play"));
+  document.getElementById("btnYoutubePause")?.addEventListener("click", () => controlarYoutube("pause"));
+  document.getElementById("btnYoutubeStop")?.addEventListener("click", () => controlarYoutube("stop"));
+  document.getElementById("btnYoutubeVoltar")?.addEventListener("click", () => controlarYoutube("voltar"));
+  document.getElementById("btnYoutubeAvancar")?.addEventListener("click", () => controlarYoutube("avancar"));
 
   document.getElementById("modalGenerico")?.addEventListener("hidden.bs.modal", pausarVideos);
 }
@@ -726,12 +1251,17 @@ document.addEventListener("DOMContentLoaded", inicializarAplicacao);
 window.videosExperiencia = videosExperiencia;
 window.abrirModalTexto = abrirModalTexto;
 window.ampliarImagem = ampliarImagem;
+window.abrirSketchfabJogador = abrirSketchfabJogador;
+window.abrirSketchfabTaca = abrirSketchfabTaca;
+window.abrirSketchfabBola = abrirSketchfabBola;
 window.tocarVideo = tocarVideo;
 window.pausarVideos = pausarVideos;
 window.trocarVideo = trocarVideo;
 window.trocarImagem = trocarImagem;
 window.silenciarTudo = silenciarTudo;
 window.alternarAudioAmbiente = alternarAudioAmbiente;
+window.atualizarAudioAmbiente = atualizarAudioAmbiente;
+window.iniciarLoopAudioAmbiente = iniciarLoopAudioAmbiente;
 window.tocarClique = tocarClique;
 window.iniciarQuiz = iniciarQuiz;
 window.reiniciarQuiz = reiniciarQuiz;
