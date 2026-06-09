@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-06-08",
+  "notes": "Assets generated for the local World Cup app. Flags are Wikimedia Commons file renderings; historical/stadium base photos are Commons files. Jersey and mascot panels are original generated compositions with no official crests/logos.",
+  "commons_media": {
+    "maracana": {
+      "title": "Estádio do Maracanã - panorama.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Est%C3%A1dio_do_Maracan%C3%A3_-_panorama.jpg",
+      "license": "Public domain",
+      "author": "Agência Brasil",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Est%C3%A1dio_do_Maracan%C3%A3_-_panorama.jpg"
+    },
+    "centenario_1930": {
+      "title": "Estadio Centenario 1930.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Estadio_Centenario_1930.jpg",
+      "license": "Public domain",
+      "author": "Unknown",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Estadio_Centenario_1930.jpg"
+    },
+    "stabile_1930": {
+      "title": "Stabile goal v uruguay 1930.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Stabile_goal_v_uruguay_1930.jpg",
+      "license": "Public domain",
+      "author": "Unknown",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Stabile_goal_v_uruguay_1930.jpg"
+    },
+    "brazil_1970": {
+      "title": "Brazil national team 1970.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Brazil_national_team_1970.jpg",
+      "license": "Public domain",
+      "author": "Unknown",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Brazil_national_team_1970.jpg"
+    },
+    "rose_bowl_1994": {
+      "title": "FEMA - 282 - Photograph by FEMA News Photo taken on 06-17-1994 in California.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/FEMA_-_282_-_Photograph_by_FEMA_News_Photo_taken_on_06-17-1994_in_California.jpg",
+      "license": "Public domain",
+      "author": "FEMA News Photo",
+      "source_page": "https://commons.wikimedia.org/wiki/File:FEMA_-_282_-_Photograph_by_FEMA_News_Photo_taken_on_06-17-1994_in_California.jpg"
+    },
+    "yokohama_2002": {
+      "title": "NISSANSTADIUM20080608.JPG",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/NISSANSTADIUM20080608.JPG",
+      "license": "Public domain",
+      "author": "Kakidai",
+      "source_page": "https://commons.wikimedia.org/wiki/File:NISSANSTADIUM20080608.JPG"
+    },
+    "tunnel": {
+      "title": "Players Tunnel - Wembley - geograph.org.uk - 4624479.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Players_Tunnel_-_Wembley_-_geograph.org.uk_-_4624479.jpg",
+      "license": "CC BY-SA 2.0",
+      "author": "Stephen Craven",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Players_Tunnel_-_Wembley_-_geograph.org.uk_-_4624479.jpg"
+    },
+    "trophy": {
+      "title": "Jules Rimet trophy replica.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Jules_Rimet_trophy_replica.jpg",
+      "license": "Public domain",
+      "author": "Sean Murray",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jules_Rimet_trophy_replica.jpg"
+    },
+    "ball": {
+      "title": "Soccer (122717889).jpeg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Soccer_%28122717889%29.jpeg",
+      "license": "CC BY-SA 3.0",
+      "author": "Robert Couse-Baker",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Soccer_(122717889).jpeg"
+    }
+  },
+  "fact_sources": {
+    "fifa_2026": {
+      "title": "FIFA World Cup 2026 host countries and cities",
+      "url": "https://www.fifa.com/en/articles/fifa-world-cup-2026-hosts-cities-dates-usa-mexico-canada",
+      "facts": [
+        "2026: Canadá, México e Estados Unidos",
+        "16 cidades-sede",
+        "11 de junho a 19 de julho de 2026"
+      ]
+    },
+    "fifa_2030_2034": {
+      "title": "Hosts appointed for 2030 and 2034 FIFA World Cups",
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/articles/2030-2034-host-nations-confirmed",
+      "facts": [
+        "2030: Marrocos, Portugal e Espanha, com jogos do centenário na América do Sul",
+        "2034: Arábia Saudita"
+      ]
+    },
+    "world_cup_titles": {
+      "title": "FIFA World Cup all-time winners summary",
+      "url": "https://en.wikipedia.org/wiki/FIFA_World_Cup",
+      "facts": [
+        "Brasil 5; Alemanha e Itália 4; Argentina 3; França e Uruguai 2; Inglaterra e Espanha 1"
+      ]
+    }
+  },
+  "flag_files": [
+    "Flag_of_Argentina.svg",
+    "Flag_of_Brazil.svg",
+    "Flag_of_Canada.svg",
+    "Flag_of_England.svg",
+    "Flag_of_France.svg",
+    "Flag_of_Germany.svg",
+    "Flag_of_Italy.svg",
+    "Flag_of_Mexico.svg",
+    "Flag_of_Morocco.svg",
+    "Flag_of_Portugal.svg",
+    "Flag_of_Saudi_Arabia.svg",
+    "Flag_of_Spain.svg",
+    "Flag_of_Uruguay.svg",
+    "Flag_of_the_United_States.svg"
+  ],
+  "champion_data": [
+    {
+      "nome": "Brasil",
+      "flag": "Flag_of_Brazil.svg",
+      "titles": 5,
+      "years": "1958, 1962, 1970, 1994, 2002",
+      "code": "BRA",
+      "color": "#159447"
+    },
+    {
+      "nome": "Alemanha",
+      "flag": "Flag_of_Germany.svg",
+      "titles": 4,
+      "years": "1954, 1974, 1990, 2014",
+      "code": "GER",
+      "color": "#121212"
+    },
+    {
+      "nome": "Itália",
+      "flag": "Flag_of_Italy.svg",
+      "titles": 4,
+      "years": "1934, 1938, 1982, 2006",
+      "code": "ITA",
+      "color": "#108247"
+    },
+    {
+      "nome": "Argentina",
+      "flag": "Flag_of_Argentina.svg",
+      "titles": 3,
+      "years": "1978, 1986, 2022",
+      "code": "ARG",
+      "color": "#58bde9"
+    },
+    {
+      "nome": "França",
+      "flag": "Flag_of_France.svg",
+      "titles": 2,
+      "years": "1998, 2018",
+      "code": "FRA",
+      "color": "#204aa0"
+    },
+    {
+      "nome": "Uruguai",
+      "flag": "Flag_of_Uruguay.svg",
+      "titles": 2,
+      "years": "1930, 1950",
+      "code": "URU",
+      "color": "#6ec8f0"
+    },
+    {
+      "nome": "Espanha",
+      "flag": "Flag_of_Spain.svg",
+      "titles": 1,
+      "years": "2010",
+      "code": "ESP",
+      "color": "#c72522"
+    },
+    {
+      "nome": "Inglaterra",
+      "flag": "Flag_of_England.svg",
+      "titles": 1,
+      "years": "1966",
+      "code": "ENG",
+      "color": "#eef2f7"
+    }
+  ]
+}
