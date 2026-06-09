@@ -10,6 +10,19 @@
   --sombra-ui: 0 16px 40px rgba(0, 0, 0, 0.35);
   --fonte-titulo: "Rajdhani", "Segoe UI", system-ui, sans-serif;
   --fonte-corpo: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --largura-app: 100vw;
+  --altura-app: 100vh;
+  --espaco-seguro-topo: max(16px, env(safe-area-inset-top));
+  --espaco-seguro-direita: max(16px, env(safe-area-inset-right));
+  --espaco-seguro-baixo: max(18px, env(safe-area-inset-bottom));
+  --espaco-seguro-esquerda: max(18px, env(safe-area-inset-left));
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --largura-app: 100dvw;
+    --altura-app: 100dvh;
+  }
 }
 
 * {
@@ -19,9 +32,11 @@
 html,
 body {
   width: 100%;
-  min-height: 100%;
+  height: var(--altura-app);
+  min-height: var(--altura-app);
   margin: 0;
   overflow: hidden;
+  overscroll-behavior: none;
   background: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: var(--fonte-corpo);
@@ -39,8 +54,12 @@ button {
   z-index: 50;
   display: grid;
   place-items: center;
+  width: var(--largura-app);
+  height: var(--altura-app);
+  min-height: var(--altura-app);
   padding: 24px;
-  overflow: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   background:
     linear-gradient(rgba(6, 10, 18, 0.35), rgba(6, 10, 18, 0.82)),
     radial-gradient(circle at 18% 22%, rgba(255, 212, 90, 0.28), transparent 30%),
@@ -85,6 +104,8 @@ button {
   position: relative;
   z-index: 1;
   width: min(940px, 100%);
+  max-height: calc(var(--altura-app) - 48px);
+  overflow: auto;
   padding: clamp(28px, 5vw, 56px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
@@ -160,6 +181,10 @@ button {
 .app-experiencia {
   position: fixed;
   inset: 0;
+  width: var(--largura-app);
+  height: var(--altura-app);
+  min-height: var(--altura-app);
+  overflow: hidden;
   background: #050912;
 }
 
@@ -168,17 +193,26 @@ button {
 }
 
 a-scene {
-  width: 100vw;
-  height: 100vh;
+  display: block;
+  width: var(--largura-app);
+  height: var(--altura-app);
+}
+
+a-scene canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .painel-lateral {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: var(--espaco-seguro-topo);
+  right: var(--espaco-seguro-direita);
   z-index: 20;
   display: grid;
-  width: min(210px, calc(100vw - 32px));
+  width: min(210px, calc(var(--largura-app) - 32px));
+  max-height: calc(var(--altura-app) - var(--espaco-seguro-topo) - var(--espaco-seguro-baixo));
+  overflow: auto;
   gap: 8px;
   padding: 12px;
   border: 1px solid var(--cor-borda);
@@ -230,7 +264,7 @@ a-scene {
 
 .controles-movimento {
   position: fixed;
-  inset: auto 0 18px;
+  inset: auto 0 var(--espaco-seguro-baixo);
   z-index: 18;
   display: grid;
   grid-template-columns: 78px 78px 78px;
@@ -293,23 +327,23 @@ a-scene {
 .controle-girar-esquerda,
 .controle-girar-direita {
   position: fixed;
-  bottom: 18px;
+  bottom: var(--espaco-seguro-baixo);
   width: 68px;
   height: 68px;
 }
 
 .controle-girar-esquerda {
-  left: 18px;
+  left: var(--espaco-seguro-esquerda);
 }
 
 .controle-girar-direita {
-  right: 18px;
+  right: var(--espaco-seguro-direita);
 }
 
 .mensagem-bloqueio {
   position: fixed;
   left: 50%;
-  bottom: 164px;
+  bottom: calc(var(--espaco-seguro-baixo) + 146px);
   z-index: 24;
   transform: translateX(-50%) translateY(12px);
   padding: 10px 14px;
@@ -332,11 +366,11 @@ a-scene {
 
 .painel-quiz-cena {
   position: fixed;
-  left: 18px;
-  top: 18px;
+  left: var(--espaco-seguro-esquerda);
+  top: var(--espaco-seguro-topo);
   z-index: 21;
-  width: min(460px, calc(100vw - 36px));
-  max-height: calc(100vh - 36px);
+  width: min(460px, calc(var(--largura-app) - var(--espaco-seguro-esquerda) - var(--espaco-seguro-direita)));
+  max-height: calc(var(--altura-app) - var(--espaco-seguro-topo) - var(--espaco-seguro-baixo));
   overflow: auto;
   padding: 16px;
   border: 1px solid var(--cor-borda);
@@ -524,6 +558,13 @@ a-scene {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --espaco-seguro-topo: max(10px, env(safe-area-inset-top));
+    --espaco-seguro-direita: max(10px, env(safe-area-inset-right));
+    --espaco-seguro-baixo: max(14px, env(safe-area-inset-bottom));
+    --espaco-seguro-esquerda: max(12px, env(safe-area-inset-left));
+  }
+
   .conteudo-inicial {
     padding: 24px;
   }
@@ -537,9 +578,7 @@ a-scene {
   }
 
   .painel-lateral {
-    top: 10px;
-    right: 10px;
-    width: min(178px, calc(100vw - 20px));
+    width: min(178px, calc(var(--largura-app) - 20px));
     gap: 6px;
     padding: 10px;
   }
@@ -556,7 +595,6 @@ a-scene {
   .controles-movimento {
     grid-template-columns: 72px 72px 72px;
     grid-template-rows: 58px 58px;
-    bottom: 14px;
     gap: 7px;
   }
 
@@ -566,30 +604,30 @@ a-scene {
 
   .controle-girar-esquerda,
   .controle-girar-direita {
-    bottom: 84px;
+    bottom: calc(var(--espaco-seguro-baixo) + 70px);
     width: 62px;
     height: 62px;
   }
 
   .controle-girar-esquerda {
-    left: 12px;
+    left: var(--espaco-seguro-esquerda);
   }
 
   .controle-girar-direita {
-    right: 12px;
+    right: var(--espaco-seguro-direita);
   }
 
   .mensagem-bloqueio {
-    bottom: 164px;
-    width: min(310px, calc(100vw - 32px));
+    bottom: calc(var(--espaco-seguro-baixo) + 150px);
+    width: min(310px, calc(var(--largura-app) - 32px));
     text-align: center;
   }
 
   .painel-quiz-cena {
     top: auto;
-    bottom: 150px;
-    left: 12px;
-    width: calc(100vw - 24px);
+    bottom: calc(var(--espaco-seguro-baixo) + 136px);
+    left: var(--espaco-seguro-esquerda);
+    width: calc(var(--largura-app) - var(--espaco-seguro-esquerda) - var(--espaco-seguro-direita));
     max-height: 42vh;
   }
 
@@ -606,7 +644,7 @@ a-scene {
 
 @media (max-width: 420px) {
   .painel-lateral {
-    width: calc(100vw - 20px);
+    width: calc(var(--largura-app) - 20px);
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -627,5 +665,184 @@ a-scene {
   .controle-girar-direita {
     width: 56px;
     height: 56px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 520px) {
+  :root {
+    --espaco-seguro-topo: max(8px, env(safe-area-inset-top));
+    --espaco-seguro-direita: max(8px, env(safe-area-inset-right));
+    --espaco-seguro-baixo: max(8px, env(safe-area-inset-bottom));
+    --espaco-seguro-esquerda: max(8px, env(safe-area-inset-left));
+  }
+
+  .tela-inicial {
+    place-items: start center;
+    padding: 12px;
+  }
+
+  .tela-inicial::before {
+    height: 24vh;
+  }
+
+  .conteudo-inicial {
+    width: min(780px, 100%);
+    max-height: calc(var(--altura-app) - 24px);
+    padding: 16px 20px;
+  }
+
+  .etiqueta-inicial {
+    margin-bottom: 8px;
+    font-size: 0.72rem;
+  }
+
+  .conteudo-inicial h1 {
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    line-height: 1;
+  }
+
+  .subtitulo-inicial {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .acoes-iniciais {
+    margin-top: 14px;
+  }
+
+  .acoes-iniciais .btn {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  .instrucoes-uso {
+    margin-top: 12px;
+  }
+
+  .grade-instrucoes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-instrucoes > div {
+    padding: 10px;
+  }
+
+  .grade-instrucoes p {
+    font-size: 0.86rem;
+    line-height: 1.35;
+  }
+
+  .painel-lateral {
+    width: min(286px, calc(var(--largura-app) - 16px));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .painel-topo {
+    grid-column: 1 / -1;
+    padding-bottom: 4px;
+    font-size: 0.72rem;
+  }
+
+  .painel-lateral .btn {
+    min-height: 30px;
+    padding: 4px 6px;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .status-webxr {
+    padding: 1px 6px;
+    font-size: 0.64rem;
+  }
+
+  .controles-movimento {
+    left: 50%;
+    right: auto;
+    width: max-content;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: 48px 48px;
+    gap: 6px;
+    transform: translateX(-50%);
+  }
+
+  .controle {
+    font-size: 1.45rem;
+  }
+
+  .controle-girar-esquerda,
+  .controle-girar-direita {
+    bottom: calc(var(--espaco-seguro-baixo) + 54px);
+    width: 50px;
+    height: 50px;
+  }
+
+  .mensagem-bloqueio {
+    bottom: calc(var(--espaco-seguro-baixo) + 110px);
+    width: min(280px, calc(var(--largura-app) - 24px));
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+
+  .painel-quiz-cena {
+    top: var(--espaco-seguro-topo);
+    bottom: auto;
+    width: clamp(230px, 42vw, 340px);
+    max-height: calc(var(--altura-app) - var(--espaco-seguro-topo) - var(--espaco-seguro-baixo));
+    padding: 12px;
+  }
+
+  .quiz-topo {
+    margin-bottom: 8px;
+    font-size: 0.72rem;
+  }
+
+  .painel-quiz-cena h2 {
+    margin-bottom: 8px;
+    font-size: 0.96rem;
+  }
+
+  .quiz-alternativas {
+    gap: 6px;
+  }
+
+  .quiz-alternativas button {
+    min-height: 34px;
+    padding: 6px 8px;
+    font-size: 0.82rem;
+  }
+
+  .quiz-feedback {
+    min-height: 30px;
+    margin: 8px 0;
+    font-size: 0.82rem;
+  }
+
+  .a-enter-vr {
+    left: var(--espaco-seguro-esquerda);
+    bottom: calc(var(--espaco-seguro-baixo) + 112px);
+  }
+
+  .modal-dialog {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .modal-body {
+    max-height: calc(var(--altura-app) - 94px);
+    overflow: auto;
+  }
+
+  .modal-imagem,
+  .modal-video {
+    max-height: 38vh;
+  }
+
+  .modal-youtube,
+  .modal-sketchfab {
+    max-height: calc(var(--altura-app) - 130px);
   }
 }
