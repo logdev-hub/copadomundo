@@ -1172,11 +1172,93 @@ function iniciarExperiencia() {
   telaInicial.style.display = "none";
   telaInicial.hidden = true;
   app.setAttribute("aria-hidden", "false");
+  agendarSincronizacaoViewport();
+  agendarSincronizacaoViewport(120);
 
   window.estadoExperiencia.experienciaIniciada = true;
   window.estadoExperiencia.audioAtivo = true;
   iniciarLoopAudioAmbiente();
   trocarAmbiente("praca");
+}
+
+let quadroViewportResponsivo = null;
+
+function obterDimensoesViewport() {
+  const viewportVisual = window.visualViewport;
+  const largura = viewportVisual?.width || window.innerWidth || document.documentElement.clientWidth;
+  const altura = viewportVisual?.height || window.innerHeight || document.documentElement.clientHeight;
+
+  return {
+    largura: Math.max(1, Math.round(largura)),
+    altura: Math.max(1, Math.round(altura))
+  };
+}
+
+function sincronizarViewportResponsivo() {
+  quadroViewportResponsivo = null;
+
+  const { largura, altura } = obterDimensoesViewport();
+  document.documentElement.style.setProperty("--largura-app", `${largura}px`);
+  document.documentElement.style.setProperty("--altura-app", `${altura}px`);
+
+  const cena = document.getElementById("cenaPrincipal");
+  if (!cena) {
+    return;
+  }
+
+  cena.style.width = `${largura}px`;
+  cena.style.height = `${altura}px`;
+
+  if (cena.canvas) {
+    cena.canvas.style.width = "100%";
+    cena.canvas.style.height = "100%";
+  }
+
+  if (!cena.hasLoaded) {
+    cena.addEventListener("loaded", () => agendarSincronizacaoViewport(), { once: true });
+    return;
+  }
+
+  try {
+    cena.resize?.();
+  } catch (erro) {
+    console.warn("Falha ao redimensionar cena.", erro);
+  }
+
+  const camera = document.getElementById("cameraUsuario");
+  const cameraThree = camera?.components?.camera?.camera;
+  if (cameraThree?.isPerspectiveCamera) {
+    cameraThree.aspect = largura / altura;
+    cameraThree.updateProjectionMatrix();
+  }
+}
+
+function agendarSincronizacaoViewport(atraso = 0) {
+  if (atraso > 0) {
+    window.setTimeout(() => agendarSincronizacaoViewport(), atraso);
+    return;
+  }
+
+  if (quadroViewportResponsivo) {
+    window.cancelAnimationFrame(quadroViewportResponsivo);
+  }
+
+  quadroViewportResponsivo = window.requestAnimationFrame(sincronizarViewportResponsivo);
+}
+
+function inicializarViewportResponsivo() {
+  sincronizarViewportResponsivo();
+
+  window.addEventListener("resize", () => agendarSincronizacaoViewport(), { passive: true });
+  window.addEventListener("orientationchange", () => {
+    window.limparMovimentos?.();
+    agendarSincronizacaoViewport();
+    agendarSincronizacaoViewport(120);
+    agendarSincronizacaoViewport(360);
+  }, { passive: true });
+
+  window.visualViewport?.addEventListener("resize", () => agendarSincronizacaoViewport(), { passive: true });
+  window.visualViewport?.addEventListener("scroll", () => agendarSincronizacaoViewport(), { passive: true });
 }
 
 function verificarWebXR() {
@@ -1185,12 +1267,13 @@ function verificarWebXR() {
     return;
   }
 
-  if (!navigator.xr?.isSessionSupported) {
+  const xr = window.navigator?.xr;
+  if (!xr?.isSessionSupported) {
     status.textContent = "Sem WebXR";
     return;
   }
 
-  navigator.xr.isSessionSupported("immersive-vr")
+  xr.isSessionSupported("immersive-vr")
     .then((suportado) => {
       status.textContent = suportado ? "WebXR OK" : "WebXR parcial";
       status.classList.toggle("disponivel", suportado);
@@ -1233,6 +1316,8 @@ function inicializarEventos() {
 }
 
 async function inicializarAplicacao() {
+  inicializarViewportResponsivo();
+
   [conteudos, perguntasQuiz] = await Promise.all([
     carregarJSON("data/conteudos.json", conteudosPadrao),
     carregarJSON("data/quiz.json", quizPadrao)
