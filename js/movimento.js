@@ -25,19 +25,31 @@ const estadoMovimento = {
   ultimoPortal: 0
 };
 
+const nomesMovimento = ["frente", "tras", "esquerda", "direita", "girarEsquerda", "girarDireita"];
+const fontesMovimentoAtivas = Object.fromEntries(nomesMovimento.map((nome) => [nome, new Set()]));
 const vetorFrenteMovimento = new THREE.Vector3();
 const vetorDireitaMovimento = new THREE.Vector3();
 const vetorCimaMovimento = new THREE.Vector3(0, 1, 0);
 const quaternionMovimento = new THREE.Quaternion();
 
-function marcarMovimento(nome, ativo) {
-  if (Object.prototype.hasOwnProperty.call(estadoMovimento, nome)) {
-    estadoMovimento[nome] = ativo;
+function marcarMovimento(nome, ativo, origem = "geral") {
+  if (!Object.prototype.hasOwnProperty.call(fontesMovimentoAtivas, nome)) {
+    return;
   }
+
+  const fontes = fontesMovimentoAtivas[nome];
+  if (ativo) {
+    fontes.add(origem);
+  } else {
+    fontes.delete(origem);
+  }
+
+  estadoMovimento[nome] = fontes.size > 0;
 }
 
 function limparMovimentos() {
-  ["frente", "tras", "esquerda", "direita", "girarEsquerda", "girarDireita"].forEach((nome) => {
+  nomesMovimento.forEach((nome) => {
+    fontesMovimentoAtivas[nome].clear();
     estadoMovimento[nome] = false;
   });
 
@@ -142,7 +154,7 @@ function inicializarBotoesMovimento() {
     const ativar = (evento) => {
       evento.preventDefault();
       botao.setPointerCapture?.(evento.pointerId);
-      marcarMovimento(nome, true);
+      marcarMovimento(nome, true, `visual:${nome}`);
       botao.classList.add("pressionado");
     };
 
@@ -151,7 +163,7 @@ function inicializarBotoesMovimento() {
       if (evento?.pointerId !== undefined && botao.hasPointerCapture?.(evento.pointerId)) {
         botao.releasePointerCapture(evento.pointerId);
       }
-      marcarMovimento(nome, false);
+      marcarMovimento(nome, false, `visual:${nome}`);
       botao.classList.remove("pressionado");
     };
 
@@ -190,7 +202,8 @@ function inicializarTeclado() {
     }
 
     evento.preventDefault();
-    marcarMovimento(nome, true);
+    const origem = evento.gamepadSource ? `gamepad-tecla:${evento.code}` : `teclado:${evento.code}`;
+    marcarMovimento(nome, true, origem);
   });
 
   window.addEventListener("keyup", (evento) => {
@@ -200,7 +213,8 @@ function inicializarTeclado() {
     }
 
     evento.preventDefault();
-    marcarMovimento(nome, false);
+    const origem = evento.gamepadSource ? `gamepad-tecla:${evento.code}` : `teclado:${evento.code}`;
+    marcarMovimento(nome, false, origem);
   });
 }
 
@@ -327,6 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.estadoMovimento = estadoMovimento;
+window.marcarMovimento = marcarMovimento;
 window.limparMovimentos = limparMovimentos;
 window.resetarCamera = resetarCamera;
 window.aplicarPosicaoCamera = aplicarPosicaoCamera;

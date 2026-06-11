@@ -24,15 +24,39 @@ No VS Code, também funciona com a extensão Live Server.
 - `css/style.css`: layout responsivo, tela inicial, setas e painéis.
 - `js/script.js`: inicialização, mapa, modais, vídeos, áudio e quiz.
 - `js/movimento.js`: WASD, setas, botões de toque e movimento contínuo.
+- `js/input-gamepad.js`: camada adicional para controles VR/Bluetooth via Web Gamepad API.
 - `js/colisoes.js`: limites, colisores e portas entre ambientes.
 - `js/ambientes.js`: geração dos ambientes 3D.
 - `data/conteudos.json`: textos editáveis.
 - `data/quiz.json`: perguntas do quiz.
 - `assets/img`, `assets/posters`, `assets/audio`, `assets/video`: mídias locais.
 
-## Trocar vídeos
+## Controle VR/Bluetooth
 
-Coloque os arquivos MP4 na pasta `assets/video` usando estes nomes:
+A aplicação aceita teclado, mouse, touch e também controles reconhecidos pela Web Gamepad API. Conecte o controle ao computador/celular, abra a experiência no navegador e pressione qualquer botão do controle para que o navegador o ative.
+
+Mapeamento inicial em `js/input-gamepad.js`:
+
+- Joystick vertical: frente e trás.
+- Joystick horizontal: girar para esquerda e direita.
+- Botão `0`: OK/Gatilho, interage com o objeto apontado pela câmera.
+- Botão `1`: voltar, fecha modal aberto ou retorna ao ambiente anterior quando houver histórico.
+- Botão `2`: menu, abre/fecha o mapa quando a experiência estiver iniciada.
+- Botões `12`, `13`, `14`, `15`: simulam ArrowUp, ArrowDown, ArrowLeft e ArrowRight.
+
+Se o modelo do controle usar outros índices, ative o painel de diagnóstico em `js/input-gamepad.js` com `const DEBUG_GAMEPAD = true;`, pressione os botões e ajuste o objeto `GAMEPAD_MAPPING`.
+
+## Vídeos interativos
+
+Os pontos de vídeo da cena usam links do YouTube cadastrados em `js/script.js`, dentro de `videosExperiencia`. Ao clicar em uma tela 3D, o modal abre o player com controles de reproduzir, pausar, parar, retroceder 10 segundos e avançar 10 segundos.
+
+As miniaturas exibidas nas telas 3D ficam em `assets/posters/youtube`. Para recriá-las a partir dos thumbnails do YouTube:
+
+```bash
+python scripts/build_youtube_posters.py
+```
+
+Também é possível usar vídeos MP4 locais. Coloque os arquivos na pasta `assets/video` e ajuste `videosExperiencia` para apontar para eles:
 
 - `abertura-copa.mp4`
 - `momentos-historicos.mp4`
@@ -44,17 +68,26 @@ Coloque os arquivos MP4 na pasta `assets/video` usando estes nomes:
 - `mascotes-copa.mp4`
 - `taca-copa.mp4`
 
-Os pôsteres já existem em `assets/posters`. Se um vídeo ainda não existir, o modal mostra aviso e mantém o pôster.
+Os pôsteres já existem em `assets/posters`. Se um vídeo local ainda não existir, o modal mostra aviso e mantém o pôster temático.
 
-## Trocar imagens
+## Imagens e fontes
 
-Substitua os arquivos em `assets/img` mantendo o mesmo nome. Exemplos:
+As imagens genéricas foram trocadas por assets locais com fotos históricas, bandeiras reais, painéis de dados e composições autorais. As fontes e licenças usadas ficam em `assets/asset-sources.json`.
+
+Para regenerar o conjunto de imagens:
+
+```bash
+python scripts/build_real_assets.py
+```
+
+Principais arquivos gerados:
 
 - `assets/img/estadio-copa.jpg`
 - `assets/img/mapa-estadio.png`
 - `assets/img/campo-tatico.png`
 - `assets/img/camisas/camisa-01.png`
 - `assets/img/mascotes/mascote-01.png`
+- `assets/posters/poster-abertura.jpg`
 
 As imagens são usadas por painéis 3D, galerias, vitrines, bandeiras e pôsteres.
 
@@ -140,4 +173,4 @@ Envie a pasta inteira para qualquer hospedagem estática. Não há backend nem b
 - A experiência usa CDNs para Bootstrap 5 e A-Frame.
 - WebXR aparece quando o navegador e o dispositivo oferecem suporte.
 - O sistema de colisão é retangular e simples, pensado para desempenho e fácil edição.
-- Os placeholders podem ser substituídos por imagens, vídeos e áudios reais a qualquer momento.
+- Os assets principais ficam versionados localmente; os vídeos podem ser adicionados depois em `assets/video`.

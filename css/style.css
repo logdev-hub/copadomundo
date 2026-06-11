@@ -262,6 +262,77 @@ a-scene canvas {
   background: rgba(255, 255, 255, 0.18);
 }
 
+.gamepad-panel {
+  position: fixed;
+  left: var(--espaco-seguro-esquerda);
+  bottom: calc(var(--espaco-seguro-baixo) + 148px);
+  z-index: 22;
+  width: min(320px, calc(var(--largura-app) - 32px));
+  max-height: min(42vh, 320px);
+  overflow: auto;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  color: var(--cor-texto);
+  background: rgba(5, 10, 18, 0.82);
+  box-shadow: var(--sombra-ui);
+  backdrop-filter: blur(12px);
+}
+
+.gamepad-panel[hidden] {
+  display: none;
+}
+
+.gamepad-panel-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: var(--cor-destaque);
+  font-family: var(--fonte-titulo);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.gamepad-panel-topo span {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 2px 8px;
+  color: var(--cor-texto-suave);
+  font-family: var(--fonte-corpo);
+  font-size: 0.7rem;
+}
+
+.gamepad-status-texto {
+  margin: 0 0 8px;
+  color: var(--cor-texto-suave);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.gamepad-instrucoes {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(247, 249, 251, 0.88);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.gamepad-debug-info {
+  margin: 10px 0 0;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #dbeafe;
+  background: rgba(0, 0, 0, 0.28);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+
 .controles-movimento {
   position: fixed;
   inset: auto 0 var(--espaco-seguro-baixo);
@@ -623,6 +694,12 @@ a-scene canvas {
     text-align: center;
   }
 
+  .gamepad-panel {
+    bottom: calc(var(--espaco-seguro-baixo) + 136px);
+    width: min(300px, calc(var(--largura-app) - 24px));
+    max-height: 34vh;
+  }
+
   .painel-quiz-cena {
     top: auto;
     bottom: calc(var(--espaco-seguro-baixo) + 136px);
@@ -785,6 +862,17 @@ a-scene canvas {
     width: min(280px, calc(var(--largura-app) - 24px));
     padding: 8px 10px;
     font-size: 0.82rem;
+  }
+
+  .gamepad-panel {
+    bottom: calc(var(--espaco-seguro-baixo) + 104px);
+    width: min(280px, 44vw);
+    max-height: calc(var(--altura-app) - 118px);
+    padding: 10px;
+  }
+
+  .gamepad-instrucoes {
+    display: none;
   }
 
   .painel-quiz-cena {

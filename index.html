@@ -85,7 +85,12 @@
 
         <a-entity id="mundo"></a-entity>
 
-        <a-entity id="rigCamera" position="0 1.6 8" rotation="0 0 0" controle-movimento>
+        <a-entity
+          id="rigCamera"
+          position="0 1.6 8"
+          rotation="0 0 0"
+          controle-movimento
+          gamepad-controls="moveSpeed: 3.35; turnSpeed: 74; deadzone: 0.25; horizontalMode: turn">
           <a-camera
             id="cameraUsuario"
             look-controls="pointerLockEnabled: false; reverseMouseDrag: false"
@@ -207,5 +212,6 @@
     <script src="js/ambientes.js"></script>
     <script src="js/movimento.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/input-gamepad.js"></script>
   </body>
 </html>
